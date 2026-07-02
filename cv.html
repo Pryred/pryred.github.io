@@ -3,40 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | CV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Alexis Declippel | CV</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cv.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="active"><div class="logo">Mon Portfolio</div></a>
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo AD">
+                    <span><span class="prompt">~/</span><span class="path">alexis-declippel</span><span class="cursor"></span></span>
+                </div>
+            </a>
             <ul class="menu">
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="projets.html">Projets</a></li>
+                <li><a href="cv.html" class="active">CV</a></li>
             </ul>
         </nav>
-    </header> 
+    </header>
 
     <section class="cv-page">
+        <span class="eyebrow">// curriculum vitae</span>
         <h1>Mon CV</h1>
-        <p class="section-intro">Voici mon parcours académique et professionnel en un coup d'œil.</p>
-        
-        <div class="cv-container">
-            <img src="images/cv.png" alt="Mon CV" class="cv-image">
-            <a href="CV Alexis DECLIPPEL Stage.pdf" download="CV_Alexis_DECLIPPEL_Stage.pdf" class="btn-download">
-                <i class="fas fa-download"></i> Télécharger mon CV
-            </a>
+        <p class="section-intro">Mon parcours académique et professionnel en un coup d'œil.</p>
+
+        <div class="cv-container window">
+            <div class="window-bar">
+                <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+                <span class="filename">CV_Alexis_DECLIPPEL.pdf</span>
+            </div>
+            <img src="images/cv.png" alt="CV d'Alexis Declippel" class="cv-image">
         </div>
+
+        <a href="CV Alexis DECLIPPEL.pdf" download="CV_Alexis_DECLIPPEL.pdf" class="btn btn-primary btn-download">
+            <i class="fas fa-download"></i> Télécharger mon CV
+        </a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Alexis Declippel.</p>
-        <div class="social">
-            <a href="https://github.com/Pryred" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/alexis-declippel/" target="_blank"><i class="fab fa-linkedin"></i></a> <br/>
-            <p class="email">alexis.declippel2@gmail.com</p>
+        <div class="footer-inner">
+            <p>&copy; 2025 Alexis Declippel — codé à la main</p>
+            <div class="social">
+                <a href="https://github.com/Pryred" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/alexis-declippel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <p class="email">alexis.declippel2@gmail.com</p>
+            </div>
         </div>
     </footer>
 </body>
