@@ -34,14 +34,3 @@ Pour ajouter une compétence : une entrée dans `skills.js` ; si son `id` appara
 
 > Si un jour le site vit dans un repo projet (ex: `Pryred/portfolio`), mettre
 > `base: '/portfolio/'` dans `vite.config.js`.
-
-## Nom de domaine personnalisé (optionnel)
-
-1. Acheter un domaine (OVH, Namecheap, Cloudflare, Gandi… ~8–15 €/an).
-2. Dans la zone DNS du registrar :
-   - 4 enregistrements **A** sur `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - 1 enregistrement **CNAME** sur `www` → `pryred.github.io`
-3. Sur GitHub : **Settings → Pages → Custom domain** → saisir le domaine, attendre la
-   vérification DNS, puis cocher **Enforce HTTPS**.
-4. Ajouter un fichier `public/CNAME` contenant une seule ligne avec le domaine
-   (ex: `alexisdeclippel.dev`) pour que le build le conserve à chaque déploiement.
