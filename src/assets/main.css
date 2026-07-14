@@ -1,0 +1,123 @@
+/* ============================================================
+   main.css — DA « Nocturne éditorial »
+   Base sombre (esprit DA 1) + sobriété et respiration de la
+   DA 3 : serif élégante, accent laiton unique, filets fins.
+   Tokens globaux + styles partagés ; le reste vit dans les
+   blocs <style scoped> des composants.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Fond & surfaces */
+  --bg: #101319;
+  --surface: #171c26;
+  --surface-2: #1d2330;
+  --line: #262d3c;
+
+  /* Texte */
+  --text: #e9edf3;
+  --muted: #99a2b4;
+
+  /* Accent laiton */
+  --brass: #d4a15f;
+  --brass-light: #e2b476;
+  --brass-soft: rgba(212, 161, 95, 0.14);
+  --on-brass: #221708;
+
+  /* Tags techniques par catégorie */
+  --t-lang: #8ab4f8;
+  --t-fw: #c5a3ff;
+  --t-db: #7fd1a2;
+  --t-tool: #e6b877;
+
+  /* Typographies */
+  --serif: 'Fraunces', serif;
+  --sans: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.7;
+  background-image: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212, 161, 95, 0.07), transparent);
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--brass); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--brass-light); }
+
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 3px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
+
+/* ---------- Utilitaires partagés ---------- */
+.container { max-width: 1150px; margin: 0 auto; padding-left: 5%; padding-right: 5%; }
+
+.eyebrow {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.section-title { font-size: 2.1rem; margin-bottom: 0.6rem; }
+
+.rule { width: 56px; height: 2px; background: var(--brass); margin-bottom: 2rem; border: none; }
+
+.btn {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.85rem 1.6rem;
+  border-radius: 100px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-family: var(--sans);
+}
+
+.btn-primary { background: var(--brass); color: var(--on-brass); }
+.btn-primary:hover { background: var(--brass-light); color: var(--on-brass); transform: translateY(-2px); }
+
+.btn-ghost { border: 1px solid var(--line); color: var(--text); background: transparent; }
+.btn-ghost:hover { border-color: var(--brass); color: var(--brass); }
+
+/* ---------- Tags techniques ---------- */
+.tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.tags .tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.28rem 0.75rem;
+  border-radius: 100px;
+  border: 1px solid;
+  background: transparent;
+  font-family: var(--sans);
+  transition: all 0.2s ease;
+}
+
+.tag.t-lang { color: var(--t-lang); border-color: rgba(138, 180, 248, 0.35); }
+.tag.t-fw   { color: var(--t-fw);   border-color: rgba(197, 163, 255, 0.35); }
+.tag.t-db   { color: var(--t-db);   border-color: rgba(127, 209, 162, 0.35); }
+.tag.t-tool { color: var(--t-tool); border-color: rgba(230, 184, 119, 0.35); }
+
+button.tag { cursor: pointer; }
+button.tag:hover { border-color: var(--brass); color: var(--brass); }
+
+/* ---------- Accessibilité mouvement ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}

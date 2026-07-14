@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      // GitHub Pages ne connaît pas les routes SPA (/projets, /cv) :
+      // on redirige vers index.html en conservant le chemin demandé.
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      location.replace('/');
+    </script>
+  </head>
+  <body></body>
+</html>
