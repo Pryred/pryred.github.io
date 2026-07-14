@@ -3,8 +3,8 @@
     <!-- ===== Hero ===== -->
     <section class="hero container">
       <div>
-        <span class="eyebrow">Développeur full-stack — Toulouse</span>
-        <h1>Construire des applications <em>utiles</em>, du front à la donnée.</h1>
+        <span class="eyebrow">Développeur full-stack/backend — Toulouse</span>
+          <h1>Construire des applications web, du <em>moteur</em> à l'interface.</h1>
         <p class="lead">
           Je suis Alexis Declippel, en <b>alternance chez Ubigreen</b> depuis septembre 2025 —
           Angular, .NET 8 et SQL Server — après y avoir effectué un stage de 3 mois et demi.
@@ -25,7 +25,6 @@
       <span class="eyebrow">Savoir-faire</span>
       <h2 class="section-title">Compétences techniques</h2>
       <hr class="rule" />
-      <p class="hint">Le carrousel défile automatiquement — cliquez sur une compétence pour voir les projets qui l'utilisent.</p>
       <SkillsCarousel />
     </section>
 
